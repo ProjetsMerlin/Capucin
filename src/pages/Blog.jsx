@@ -7,6 +7,7 @@ import { useData } from "../context/DataContext"
 import { gql } from "@apollo/client"
 import { useAppQuery } from "../hooks/useAppQuery"
 import { Link, useLocation } from "react-router-dom"
+import "../assets/blog.css"
 
 function Blog() {
   const locationPath = useLocation()

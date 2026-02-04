@@ -15,20 +15,22 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ## installation
 
-* téléchargez les fichiers du dossier dist
+* Téléchargez les fichiers du dossier dist
 * Modifiez le fichier data.json et éventuellement le fichier style.css pour le style
 * Mettez ces 5 fichiers en ligne à la racine de votre hébergement
 
 ## Dépendances
 
 Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/>
+Apollo
+Tailind CSS
 
 ## Liaisons graphQL
 
 ### En cours
 
 * Taxonomies (tags & categories)
-* exploiter options de lecture (pagination)
+* Exploiter options de lecture (=> pagination)
 * Exploiter type de posts (blog/home/posts)
 
 ### Fait
@@ -41,7 +43,7 @@ Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https:/
 
 ### No DEV
 
-* Comments :negative_squared_cross_mark ❌
+* Comments ❌
 * Plugins ❌
 * Révisions ❌
 * Scripts & Styles ❌
@@ -49,100 +51,103 @@ Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https:/
 
 ## to Do
 
-* permuter au mieu les données avec le fichier data.json
-* créer les autres composants
-* Montrer en5 étapes, comment archiver le wordpress situé à la racine pour installer cCapucin : un site léger et dynamique mais toujours lier au données du CMS.
+* Permuter au mieu les données avec le fichier data.json
+* Créer les autres composants
+* Montrer en 5 étapes, comment archiver le wordpress situé à la racine pour installer cCapucin : un site léger et dynamique mais toujours lier au données du CMS.
+
+## Pages crées
+
+* Blog ✔️
+* Page ✔️
+* 404 ✔️
+
+## Pages En cours
+
+* Page : home
+* Users => Timelines
+* contact page (template ?) => Formulaire
+* Medias (attachment)
 
 ## composants créés
 
-Header ✔️
-Menus ✔️
-Footer ✔️
-Loading ✔️
-Error ✔️
+* Header ✔️
+* Menus ✔️
+* Footer ✔️
+* Loader ✔️
+* Error ✔️
 
-## En cours de développement
+## Composants en cours
 
-## Très prochainement
+### Très prochainement
 
-Page : 404, home
-Medias (attachment)
-Users (Timelines)
-contact page (template ?) => formulaire
-Button Groups
-Stats
-Tables
-Tabs
+* Button Groups
+* Stats
+* Tables
+* Tabs
+* Timelines
+* Dividers
 
 ### Formulaire
 
-Inputs
-Selects
-Checkboxes
-Radio Groups
-Textareas
+* Inputs
+* Selects
+* Checkboxes
+* Radio Groups
+* Textareas
 
 #### ()
 
-Dropdowns
-Quantity Inputs
-Range Inputs
-File Uploaders
-Toggles
+* Dropdowns
+* Quantity Inputs
+* Range Inputs
+* File Uploaders
+* Toggles
 
-### autres *
+### Listes
 
-Loaders
-Dividers
-Modals
-Progress Bars
-Empty States
+* Badges -> Services
+* Breadcrumbs -> Services
+* Details Lists -> Services
+* Filters -> Blog
+* Pagination -> Blog
 
-### lists
+### No dev
 
-Badges -> Services
-Breadcrumbs -> Services
-Details Lists -> Services
-Filters -> Blog
-Pagination -> Blog
-
-## No dev
-
-Side Menu ❌
-Skip Links ❌
-Toasts ❌
-Steps ❌
-Vertical Menu ❌
+* Side Menu & Vertical Menu ❌
+* Skip Links & Empty States & Toasts ?? ❌
+* Steps ❌
+* Progress Bars ❌
+* Modal ❌
 
 ## Commandes utiles
 
 ### Vite
 
-npm create vite@latest capucin -- --template react
-cd capucin
-npm install @apollo/client graphql
-npm install tailwindcss @tailwindcss/vite
-npm run dev
+* npm create vite@latest capucin -- --template react
+* cd capucin
+* npm install @apollo/client graphql
+* npm install tailwindcss @tailwindcss/vite
+* npm run dev
 
 ### Wordpress
 
-wp core download --locale=fr_FR
-wp config create --dbname=capucin --dbuser=root --dbpass=root --locale=localhost --dbprefix=capucin_wp
-wp db create
-wp core install --url=http://localhost/capucin/wp --title=capucin --admin_user=merlin --admin_password=1234 --admin_email=merlin@arpeggio.be
-wp option update blogname "Capucin"
-wp option update blogdescription "Capucin"
-wp theme delete twentytwentyfour twentytwentythree twentytwentytwo
-wp plugin delete akismet hello
-wp plugin install block-bad-queries really-simple-ssl antispam-bee
-wp plugin install classic-editor --activate
-wp rewrite structure "%postname%"
-del /f wp-config-sample.php
-del /f license.txt
-del /f readme.html
+* wp core download --locale=fr_FR
+* wp config create --dbname=capucin --dbuser=root --dbpass=root --locale=localhost --dbprefix=capucin_wp
+* wp db create
+* wp core install --url=http://localhost/capucin/wp --title=capucin --admin_user=merlin --admin_password=1234 --admin_email=merlin@arpeggio.be
+* wp option update blogname "Capucin"
+* wp option update blogdescription "Capucin"
+* wp theme delete twentytwentyfour twentytwentythree twentytwentytwo
+* wp plugin delete akismet hello
+* wp plugin install block-bad-queries really-simple-ssl antispam-bee
+* wp plugin install classic-editor --activate
+* wp rewrite structure "%postname%"
+* del /f wp-config-sample.php
+* del /f license.txt
+* del /f readme.html
 
 ### Github
 
-git remote add origin https://github.com/ProjetsMerlin/Capucin.git
-git branch -M main
-git push -u origin main
+* git remote add origin https://github.com/ProjetsMerlin/Capucin.git
+* git branch -M main
+* git push -u origin main

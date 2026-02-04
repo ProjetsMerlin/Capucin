@@ -1,3 +1,5 @@
+import "../assets/header.css"
+
 const Header = ({ children }) => {
   return (
     <nav>

@@ -1,0 +1,86 @@
+
+/* HEADER */
+nav {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.wrap_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuBurger {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menuBurger {
+    display: none;
+  }
+}
+
+.menuBurger {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.menuBurger:hover {
+  background-color: #f1f5f9;
+}
+
+.menuBurger svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+menu a {
+  color: var(--text_color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+menu a:hover {
+  color: var(--primary_color);
+}
+
+.active_link {
+  color: var(--primary_color);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobileMenu {
+    display: block;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.mobileMenu a {
+  display: block;
+  padding: 0.5 1px;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}

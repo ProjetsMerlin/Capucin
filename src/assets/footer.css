@@ -1,15 +1,15 @@
-
 /* FOOTER */
 div:has(>footer) {
+  padding-top: 56px;
   background-color: var(--dark_color);
   color: var(--light_color);
 }
 
 .footer_wrapper {
-  padding-top: 4rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -50,14 +50,12 @@ footer a:hover {
 }
 
 aside {
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
+  margin: 3px auto 0px;
   padding-top: 2rem;
-  border-top: 1px solid #1e293b;
-  text-align: center;
+  max-width: 80rem;
   color: var(--text_color);
+  text-align: center;
+  border-top: 1px solid #1e293b;
 }
 
 aside a {

@@ -2,6 +2,7 @@ import { useData } from "../context/DataContext"
 import { gql } from "@apollo/client"
 import { useAppQuery } from "../hooks/useAppQuery"
 import { useLocation } from "react-router-dom"
+import Error404 from "../pages/Error404"
 
 const GET_PAGE = gql`
   query GetPageBySlug($slug: String!) {
@@ -36,7 +37,9 @@ function Page() {
 
   const page = data?.pageBy
 
-  console.log()
+  if (!page) {
+    return <Error404 />
+  }
 
   return (
     <section className="section">
