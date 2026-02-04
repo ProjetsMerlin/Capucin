@@ -1,0 +1,29 @@
+{
+  "title": null,
+  "description": null,
+  "author": "Merlin",
+  "authorWebsite": "https://lintermediaire.be",
+
+  "hide_folder": "/admin/",
+
+  "graphqlEndpoint": "http://localhost/capucin/wp/graphql",
+
+  "content": {
+    "fr": {
+      "more": "Lire l'article",
+      "nopost": "Aucun article pour le moment.",
+      "navigationTitle": "Navigation",
+      "contactTitle": "Contact",
+      "poweredBy": "Réalisé par",
+      "navigation": [
+        { "label": "Accueil", "uri": "/" },
+        { "label": "Services", "uri": "/services" },
+        { "label": "Blog", "uri": "/blog" },
+        { "label": "À propos", "uri": "/a-propos" },
+        { "label": "Contact", "uri": "/contact" }
+      ]
+    }
+  },
+
+  "version": 1.0
+}
