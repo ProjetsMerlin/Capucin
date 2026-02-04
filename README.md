@@ -51,10 +51,18 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Entêtes de sécurité ✔️
 * Limite taille de la requête ✔️
 
+### Design
+
+* Css accessible ✔️
+* Compatibilité écrans (Tailwind) ✔️
+* Compatibilité navigateurs (tailwind) ✔️
+* import des fontes personnalisées ❌
+* import des images personnalisées ❌
+
 ## Aéliorations
 
-* multilangue
-* ajout de thèmes ?
+* Multilangue
+* Ajout de thèmes ?
 * Pouvoir modifier la structure ...
 
 ## Liaisons graphQL
