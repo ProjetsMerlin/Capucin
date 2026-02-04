@@ -21,9 +21,41 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ## Dépendances
 
-Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/>
-Apollo
-Tailind CSS
+* Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/>
+* Apollo
+* Tailind CSS
+
+## plan
+
+* content => data.json
+* style => style.css
+* dev => main.js
+* SEO => index.php
+* sécurité => .htaccess
+
+## Check
+
+### SEO
+
+* robots.txt ✔️
+* sitemap.xml ✔️
+* rewrite URL ⌛
+* favicons ❌
+* Balise OGG ❌
+
+### Sécurité
+
+* https ✔️
+* hide folder ✔️
+* protection contre les injection ✔️
+* Entêtes de sécurité ✔️
+* Limite taille de la requête ✔️
+
+## Aéliorations
+
+* multilangue
+* ajout de thèmes ?
+* Pouvoir modifier la structure ...
 
 ## Liaisons graphQL
 
@@ -49,7 +81,7 @@ Tailind CSS
 * Scripts & Styles ❌
 * Themes ❌
 
-## to Do
+## To Do
 
 * Permuter au mieu les données avec le fichier data.json
 * Créer les autres composants
@@ -68,7 +100,7 @@ Tailind CSS
 * contact page (template ?) => Formulaire
 * Medias (attachment)
 
-## composants créés
+## Coomposants créés
 
 * Header ✔️
 * Menus ✔️

@@ -10,7 +10,6 @@ export default function App() {
     <DataProvider>
       <BrowserRouter>
         <Layout>
-          <Loading />
           <Routes>
             <Route path="*" element={<Page />} />
             <Route path="/" element={<Page />} />

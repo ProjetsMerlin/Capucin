@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { renameSync, existsSync, readFileSync } from 'fs'
 import { resolve } from 'path'
 import { URL } from 'url'
 import tailwindcss from '@tailwindcss/vite'
+import { readFileSync } from 'node:fs'
 
 function getGraphqlEndpoint() {
   const dataPath = resolve(__dirname, 'public', 'data.json')
@@ -13,7 +13,6 @@ function getGraphqlEndpoint() {
 }
 
 export default defineConfig(({ mode }) => {
-  // On récupère l'endpoint depuis data.json
   const graphqlEndpoint = getGraphqlEndpoint()
   const url = new URL(graphqlEndpoint)
   
@@ -21,21 +20,6 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       tailwindcss(),
-      {
-        name: 'html-to-php',
-        apply: 'build',
-        closeBundle() {
-          const distPath = resolve(__dirname, 'dist')
-          const htmlPath = resolve(distPath, 'index.html')
-          const phpPath = resolve(distPath, 'index.php')
-          
-          if (existsSync(htmlPath)) {
-            renameSync(htmlPath, phpPath)
-          } else {
-            console.error('❌ index.html no found')
-          }
-        }
-      }
     ],
     
     base: './',
@@ -56,7 +40,9 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       assetsInlineLimit: 0,
       cssCodeSplit: false,
+      // NE PAS INCLURE index.html dans le build
       rollupOptions: {
+        input: resolve(__dirname, 'src/main.jsx'), // ou src/main.tsx
         output: {
           entryFileNames: 'main.js',
           chunkFileNames: 'main.js',
