@@ -11,7 +11,7 @@ const DataContext = createContext(null)
 export function useData() {
   const context = useContext(DataContext)
   if (!context) {
-    throw new Error("useData doit Ãªtre utilisÃ© dans un DataProvider")
+    throw new Error("useData doit  DataProvider")
   }
   return context
 }
@@ -25,7 +25,7 @@ export function DataProvider({ children }) {
   useEffect(() => {
     async function init() {
       try {
-        const response = await fetch("./data.json")
+        const response = await fetch("/data.json")
         if (!response.ok) throw new Error("Impossible de charger data.json")
         const jsonData = await response.json()
         setData(jsonData)

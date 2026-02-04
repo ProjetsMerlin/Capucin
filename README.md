@@ -59,7 +59,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * import des fontes personnalisées ❌
 * import des images personnalisées ❌
 
-## Aéliorations
+## Améliorations
 
 * Multilangue
 * Ajout de thèmes ?
@@ -81,7 +81,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Settings ✔️
 * Options de lecture ✔️
 
-### No DEV
+### Je ne ferai pas
 
 * Comments ❌
 * Plugins ❌
@@ -89,7 +89,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Scripts & Styles ❌
 * Themes ❌
 
-## To Do
+## À faire
 
 * Permuter au mieu les données avec le fichier data.json
 * Créer les autres composants
@@ -100,6 +100,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Blog ✔️
 * Page ✔️
 * 404 ✔️
+* single post ⌛
 
 ## Pages En cours
 
@@ -115,6 +116,9 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Footer ✔️
 * Loader ✔️
 * Error ✔️
+* Author ✔️
+* Breadcrumbs ✔️
+* Badges -> Taxonomies ⌛
 
 ## Composants en cours
 
@@ -145,13 +149,11 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ### Listes
 
-* Badges -> Services
-* Breadcrumbs -> Services
 * Details Lists -> Services
 * Filters -> Blog
 * Pagination -> Blog
 
-### No dev
+### Don't
 
 * Side Menu & Vertical Menu ❌
 * Skip Links & Empty States & Toasts ?? ❌

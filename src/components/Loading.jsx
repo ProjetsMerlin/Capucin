@@ -14,8 +14,8 @@ const Loading = ({ message }) => {
           cx="12"
           cy="12"
           r="10"
-          stroke-dasharray="30"
-          stroke-dashoffset="10"
+          strokeDasharray="30"
+          strokeDashoffset="10"
         />
       </svg>
     </div>

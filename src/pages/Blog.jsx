@@ -1,8 +1,3 @@
-/*
-!!!
-- proposer des posts dans le json
-*/
-
 import { useData } from "../context/DataContext"
 import { gql } from "@apollo/client"
 import { useAppQuery } from "../hooks/useAppQuery"
@@ -78,7 +73,7 @@ function Blog() {
 
               <div className="cta">
                 {jsonData.content.fr.more}
-                <span className="icon">â†’</span>
+                <span className="icon">→</span>
               </div>
             </div>
           </Link>

@@ -17,15 +17,11 @@ export default defineConfig(({ mode }) => {
   const url = new URL(graphqlEndpoint)
   
   return {
-    plugins: [
-      react(),
-      tailwindcss(),
-    ],
+    plugins: [react(), tailwindcss()],
     
-    base: './',
-    
-    server: mode === 'development'
-    ? {
+    base: mode === 'production' ? './' : '/',
+
+    server: {
       proxy: {
         '/graphql': {
           target: `${url.protocol}//${url.host}`,
@@ -33,16 +29,14 @@ export default defineConfig(({ mode }) => {
           rewrite: (path) => path.replace(/^\/graphql/, url.pathname)
         }
       }
-    }
-    : undefined,
+    },
     
     build: {
       outDir: 'dist',
       assetsInlineLimit: 0,
       cssCodeSplit: false,
-      // NE PAS INCLURE index.html dans le build
       rollupOptions: {
-        input: resolve(__dirname, 'src/main.jsx'), // ou src/main.tsx
+        input: resolve(__dirname, 'src/main.jsx'),
         output: {
           entryFileNames: 'main.js',
           chunkFileNames: 'main.js',

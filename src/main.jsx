@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import { BrowserRouter } from "react-router-dom"
 
 /* ENTREE */
 import App from "./App"
@@ -10,6 +11,8 @@ import "./style.css"
 /* START */
 ReactDOM.createRoot(document.getElementById("capucin")).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 )

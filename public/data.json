@@ -1,12 +1,12 @@
 {
+  "graphqlEndpoint": "http://localhost/capucin/wp/graphql",
+
   "title": null,
   "description": null,
   "author": "Merlin",
   "authorWebsite": "https://lintermediaire.be",
 
   "hide_folder": "/admin/",
-
-  "graphqlEndpoint": "http://localhost/capucin/wp/graphql",
 
   "content": {
     "fr": {

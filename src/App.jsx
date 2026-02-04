@@ -1,26 +1,21 @@
 import { DataProvider } from "./context/DataContext"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout"
 import Page from "./pages/Page"
 import Blog from "./pages/Blog"
-import Loading from "./components/Loading"
+import Single from "./pages/Single"
 
 export default function App() {
   return (
     <DataProvider>
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="*" element={<Page />} />
-            <Route path="/" element={<Page />} />
-            <Route path="/blog" element={<Blog />} />
-            {/* 
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            */}
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Page />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Single />} />
+          <Route path="*" element={<Page />} />
+        </Routes>
+      </Layout>
     </DataProvider>
   )
 }
