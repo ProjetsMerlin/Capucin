@@ -7,9 +7,7 @@ import { useParams } from "react-router-dom"
 import Error404 from "../pages/Error404"
 import Author from "../components/Author"
 import Taxonomies from "../components/Taxonomies"
-import Breadcrumbs from "../components/Breadcrumbs"
-import IconDate from "../components/Icons/IconDate"
-import IconUser from "../components/Icons/IconUser"
+import Hero from "../components/Hero"
 
 const GET_POST = gql`
   query GetPostBySlug($slug: String!) {
@@ -51,18 +49,6 @@ const GET_POST = gql`
   }
 `
 
-function cleanDate(dateISO) {
-  const date = new Date(dateISO)
-
-  const options = {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }
-
-  return new Intl.DateTimeFormat("fr-FR", options).format(date)
-}
-
 function Single() {
   const { slug } = useParams()
   const { data: jsonData, loading: dataLoading, error: dataError } = useData()
@@ -80,28 +66,17 @@ function Single() {
   }
 
   return (
-    <div>
-      <section className="hero">
-        <div className="hero-content">
-          <h1>{post.title}</h1>
-          <div className="hero-meta">
-            <Breadcrumbs text={cleanDate(post.date)} Icon={IconDate} />
-            <Breadcrumbs text={cleanDate(post.date)} Icon={IconUser} />
-          </div>
-        </div>
-      </section>
-
+    <>
+      <Hero data={post} />
       <article className="article-container">
-        <Taxonomies />
-
+        <Taxonomies tax={[post.categories, post.tags]} />
         <div
           className="article-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-
         <Author author={post.author} />
       </article>
-    </div>
+    </>
   )
 }
 

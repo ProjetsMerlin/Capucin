@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom"
 import "../assets/footer.css"
 
 const Footer = ({ menu, userInfo, generalSettings, traduction }) => {
@@ -26,7 +26,7 @@ const Footer = ({ menu, userInfo, generalSettings, traduction }) => {
       </footer>
       <aside>
         <p>
-          Â© {generalSettings.title} - {traduction.content.fr.poweredBy + " "}
+          {generalSettings.title} - {traduction.content.fr.poweredBy + " "}
           <a href={userInfo.url}>{userInfo.name}</a> -{" "}
           {new Date().getFullYear()}
         </p>

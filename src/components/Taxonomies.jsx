@@ -1,28 +1,29 @@
-const Taxonomies = () => {
+const Taxonomies = ({ tax }) => {
+  if (!tax[0].edges && !tax[1].edges) {
+    return false
+  }
+
   return (
     <div className="taxonomies">
-      <div className="taxonomy-group">
-        <a href="#" className="category">
-          Développement Web
-        </a>
-        <a href="#" className="category">
-          Performance
-        </a>
-      </div>
-      <div className="taxonomy-group">
-        <a href="#" className="tag">
-          SEO
-        </a>
-        <a href="#" className="tag">
-          Optimisation
-        </a>
-        <a href="#" className="tag">
-          React
-        </a>
-        <a href="#" className="tag">
-          Vite
-        </a>
-      </div>
+      {tax[1].edges.map((post, index) => (
+        <>
+          <div className="category-group">
+            <span key={"tag_" + index} className="category">
+              {post.node.name}
+            </span>
+          </div>
+        </>
+      ))}
+
+      {tax[0].edges.map((post, index) => (
+        <>
+          <div className="taxonomy-group">
+            <span key={"tag_" + index} className="tag">
+              {post.node.name}
+            </span>
+          </div>
+        </>
+      ))}
     </div>
   )
 }

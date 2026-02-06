@@ -6,7 +6,7 @@ const Author = ({ author }) => {
           <img src={author.node.avatar.url} alt="" />
         </div>
         <div className="author-info">
-          <h3 class="capitalize">{author.node.name}</h3>
+          <h3 className="capitalize">{author.node.name}</h3>
           <p>{author.node.description}</p>
         </div>
       </div>

@@ -9,19 +9,19 @@ En cours
 L'idée ici est de lier un site Wordpress à un projet react/Vite via GraphQL.
 Le projet est construit pour lier un site web à un fichier .json qui sert de configuration. Ce dernier peut-être modifié par l'utilisateur pour remplacer la liaison qu'il peut faire avec un wordpress existant et via graphQl.
 Le but étant de créer un petit site léger mais complet, sécurisé et référencé, depuis des données modifiables : seulement 5 fichiers composent le site ! (voir tableau)
-Si vous voulez modifier le style ou le référencement, vous pouvez le faire via les fichiers adéquats compiler par le framework React et téléchargeable ici.
+Si vous voulez modifier le style ou le référencement, vous pouvez le faire via les fichiers adéquats compilés par Vite et téléchargeable ici.
 Au final, (et pour sa première version), ce n'est que la structure du site qui n'est pas customizable une fois compilé. Mais vous pourrez jouer sur le contenu, le style et son SEO.
 Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
-## installation
+## Installation
 
 * Téléchargez les fichiers du dossier dist
-* Modifiez le fichier data.json et éventuellement le fichier style.css pour le style
-* Mettez ces 5 fichiers en ligne à la racine de votre hébergement
+* Modifiez le fichier data.json et éventuellement le fichier style.css pour en changer la forme.
+* Mettez les 5 fichiers en ligne à la racine de votre hébergement
 
 ## Dépendances
 
-* Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/>
+* Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/> pour en établir la liaison
 * Apollo
 * Tailind CSS
 
@@ -40,7 +40,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * robots.txt ✔️
 * sitemap.xml ✔️
 * rewrite URL ⌛
-* favicons ❌
+* favicons ⌛
 * Balise OGG ❌
 
 ### Sécurité
@@ -56,8 +56,8 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Css accessible ✔️
 * Compatibilité écrans (Tailwind) ✔️
 * Compatibilité navigateurs (tailwind) ✔️
+* import des images personnalisées (Wordpress) ✔️
 * import des fontes personnalisées ❌
-* import des images personnalisées ❌
 
 ## Améliorations
 
@@ -69,9 +69,9 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ### En cours
 
-* Taxonomies (tags & categories)
-* Exploiter options de lecture (=> pagination)
 * Exploiter type de posts (blog/home/posts)
+* Single Taxonomies ? (tags & categories) ✔️
+* Exploiter options de lecture (=> pagination)
 
 ### Fait
 
@@ -80,6 +80,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Pages (Simple) ✔️
 * Settings ✔️
 * Options de lecture ✔️
+* Taxonomies (tags & categories) ✔️
 
 ### Je ne ferai pas
 
@@ -100,25 +101,26 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Blog ✔️
 * Page ✔️
 * 404 ✔️
-* single post ⌛
+* Single post ✔️
 
 ## Pages En cours
 
-* Page : home
-* Users => Timelines
+* Page : home ⌛
+* Users => Timelines ⌛
 * contact page (template ?) => Formulaire
 * Medias (attachment)
 
 ## Coomposants créés
 
-* Header ✔️
-* Menus ✔️
-* Footer ✔️
-* Loader ✔️
-* Error ✔️
 * Author ✔️
 * Breadcrumbs ✔️
-* Badges -> Taxonomies ⌛
+* Error ✔️
+* Footer ✔️
+* Header ✔️
+* Hero ✔️
+* Loading ✔️
+* Menus ✔️
+* Badges -> Taxonomies ✔️
 
 ## Composants en cours
 
