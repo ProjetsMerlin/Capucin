@@ -22,10 +22,17 @@ export function DataProvider({ children }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const jsonFile = {
+    development: "/data.json",
+    production: "./data.json",
+  }
+
+  const dataUrl = jsonFile[import.meta.env.MODE]
+
   useEffect(() => {
     async function init() {
       try {
-        const response = await fetch("/data.json")
+        const response = await fetch(dataUrl)
         if (!response.ok) throw new Error("Impossible de charger data.json")
         const jsonData = await response.json()
         setData(jsonData)

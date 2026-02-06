@@ -6,23 +6,15 @@ const Taxonomies = ({ tax }) => {
   return (
     <div className="taxonomies">
       {tax[1].edges.map((post, index) => (
-        <>
-          <div className="category-group">
-            <span key={"tag_" + index} className="category">
-              {post.node.name}
-            </span>
-          </div>
-        </>
+        <div key={"category_" + index} className="category-group">
+          <span className="category">{post.node.name}</span>
+        </div>
       ))}
 
       {tax[0].edges.map((post, index) => (
-        <>
-          <div className="taxonomy-group">
-            <span key={"tag_" + index} className="tag">
-              {post.node.name}
-            </span>
-          </div>
-        </>
+        <div key={"tag_" + index} className="taxonomy-group">
+          <span className="tag">{post.node.name}</span>
+        </div>
       ))}
     </div>
   )

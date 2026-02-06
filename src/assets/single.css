@@ -10,7 +10,6 @@ main:has(.hero) {
     height: 500px;
     
     color: white;
-    background-position: center/cover;
     text-align: center;
 }
 

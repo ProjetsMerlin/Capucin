@@ -15,12 +15,17 @@ function cleanDate(dateISO) {
 }
 
 const Hero = ({ data }) => {
+  const postImage = data.featuredImage?.node?.sourceUrl
+    ? "url('" + data.featuredImage?.node?.sourceUrl + "')"
+    : "var(--primary_color)"
+
   return (
     <section
       className="hero"
       style={{
-        backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600')",
+        background: postImage,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
       }}
     >
       <div className="hero_wrap">

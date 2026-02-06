@@ -39,8 +39,8 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 * robots.txt ✔️
 * sitemap.xml ✔️
+* favicons  ✔️
 * rewrite URL ⌛
-* favicons ⌛
 * Balise OGG ❌
 
 ### Sécurité
@@ -53,11 +53,11 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ### Design
 
-* Css accessible ✔️
-* Compatibilité écrans (Tailwind) ✔️
-* Compatibilité navigateurs (tailwind) ✔️
-* import des images personnalisées (Wordpress) ✔️
-* import des fontes personnalisées ❌
+* Compatibilité écrans / navigateur (Tailwind) ✔️
+* Fontes personnalisables ❌
+* couleurs personnalisables ❌
+* Images optimisées (lazy loading, dimensions appropriées) ❌
+* Css customisable (*voir la logique des classes ci-dessous) ❌
 
 ## Améliorations
 
@@ -70,14 +70,16 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 ### En cours
 
 * Exploiter type de posts (blog/home/posts)
-* Single Taxonomies ? (tags & categories) ✔️
+* Single Taxonomies ? (tags & categories)
 * Exploiter options de lecture (=> pagination)
 
 ### Fait
 
 * Menus ✔️
 * Posts (Blog) ✔️
+* Post (Single) ✔️
 * Pages (Simple) ✔️
+* Page 404 ✔️
 * Settings ✔️
 * Options de lecture ✔️
 * Taxonomies (tags & categories) ✔️
@@ -92,9 +94,8 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ## À faire
 
-* Permuter au mieu les données avec le fichier data.json
-* Créer les autres composants
-* Montrer en 5 étapes, comment archiver le wordpress situé à la racine pour installer cCapucin : un site léger et dynamique mais toujours lier au données du CMS.
+* Permuter au mieu les données avec le fichier data.json ❌
+* Montrer en 5 étapes, comment archiver le wordpress situé à la racine pour installer cCapucin : un site léger et dynamique mais toujours lier au données du CMS. ❌
 
 ## Pages crées
 
@@ -106,9 +107,9 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 ## Pages En cours
 
 * Page : home ⌛
-* Users => Timelines ⌛
-* contact page (template ?) => Formulaire
-* Medias (attachment)
+* Users => Timelines ❌
+* contact page (template ?) => Formulaire ❌
+* Medias (attachment) ❌
 
 ## Coomposants créés
 
@@ -127,10 +128,11 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 ### Très prochainement
 
 * Button Groups
+
 * Stats
 * Tables
-* Tabs
 * Timelines
+* Tabs
 * Dividers
 
 ### Formulaire

@@ -1,13 +1,9 @@
-import "../assets/single.css"
-
 import { useData } from "../context/DataContext"
 import { gql } from "@apollo/client"
 import { useAppQuery } from "../hooks/useAppQuery"
-import { useParams } from "react-router-dom"
 import Error404 from "../pages/Error404"
-import Author from "../components/Author"
-import Taxonomies from "../components/Taxonomies"
 import Hero from "../components/Hero"
+import Blog from "../pages/Blog"
 
 const GET_POST = gql`
   query GetPostBySlug($slug: String!) {
@@ -49,8 +45,8 @@ const GET_POST = gql`
   }
 `
 
-function Single() {
-  const { slug } = useParams()
+const FrontPage = () => {
+  const { slug } = "home"
   const { data: jsonData, loading: dataLoading, error: dataError } = useData()
   const { loading, error, data } = useAppQuery(GET_POST, {
     variables: { slug: `/${slug}/` },
@@ -68,16 +64,12 @@ function Single() {
   return (
     <>
       <Hero data={post} />
-      <article className="article-container">
-        <Taxonomies tax={[post.categories, post.tags]} />
-        <div
-          className="article-content"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-        <Author author={post.author} />
-      </article>
+      <div className="max-w-7xl mx-auto p-4 wrap">
+        <h1>Notre blog</h1>
+      </div>
+      <Blog />
     </>
   )
 }
 
-export default Single
+export default FrontPage

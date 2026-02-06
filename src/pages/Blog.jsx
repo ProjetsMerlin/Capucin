@@ -40,7 +40,7 @@ function Blog() {
 
   return (
     <section className="section">
-      <div className={currentPath}>
+      <div className="blog">
         {posts.map((post) => (
           <Link
             key={post.id}
