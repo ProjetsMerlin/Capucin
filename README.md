@@ -103,13 +103,13 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Page ✔️
 * 404 ✔️
 * Single post ✔️
+* Page : home ✔️
 
 ## Pages En cours
 
-* Page : home ⌛
-* Users => Timelines ❌
+* Users => Timelines -> à Ajouter sur la home ❌
+* Medias (attachment) -> à Ajouter sur la home ❌ 
 * contact page (template ?) => Formulaire ❌
-* Medias (attachment) ❌
 
 ## Coomposants créés
 
@@ -122,18 +122,17 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Loading ✔️
 * Menus ✔️
 * Badges -> Taxonomies ✔️
+* Dividers ✔️
 
 ## Composants en cours
 
 ### Très prochainement
 
 * Button Groups
-
 * Stats
 * Tables
 * Timelines
 * Tabs
-* Dividers
 
 ### Formulaire
 

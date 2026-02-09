@@ -14,7 +14,7 @@ function cleanDate(dateISO) {
   return new Intl.DateTimeFormat("fr-FR", options).format(date)
 }
 
-const Hero = ({ data }) => {
+const Hero = ({ data, generalSettings }) => {
   const postImage = data.featuredImage?.node?.sourceUrl
     ? "url('" + data.featuredImage?.node?.sourceUrl + "')"
     : "var(--primary_color)"
@@ -30,10 +30,14 @@ const Hero = ({ data }) => {
     >
       <div className="hero_wrap">
         <h1>{data.title}</h1>
-        <div className="hero-meta">
-          <Breadcrumbs text={cleanDate(data.date)} Icon={IconDate} />
-          <Breadcrumbs text={data.author.node.name} Icon={IconUser} />
-        </div>
+        {!data.isFrontPage ? (
+          <div className="hero-meta">
+            <Breadcrumbs text={cleanDate(data.date)} Icon={IconDate} />
+            <Breadcrumbs text={data.author.node.name} Icon={IconUser} />
+          </div>
+        ) : (
+          generalSettings.description
+        )}
       </div>
     </section>
   )
