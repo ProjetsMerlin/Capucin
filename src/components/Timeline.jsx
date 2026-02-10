@@ -11,8 +11,10 @@ const Timeline = ({ author }) => {
             alt={author.node.name}
           />
         </div>
-        <div className="timeline-title">{author.node.name}</div>
-        <div className="timeline-description">{author.node.description}</div>
+        <div>
+          <div className="timeline-title">{author.node.name}</div>
+          <div className="timeline-description">{author.node.description}</div>
+        </div>
       </div>
     </div>
   )
