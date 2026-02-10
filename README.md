@@ -108,7 +108,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 ## Pages En cours
 
 * Users => Timelines -> à Ajouter sur la home ❌
-* Medias (attachment) -> à Ajouter sur la home ❌ 
+* Medias (attachment) -> à Ajouter sur la home ❌
 * contact page (template ?) => Formulaire ❌
 
 ## Coomposants créés
