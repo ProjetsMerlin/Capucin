@@ -123,16 +123,15 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * Menus ✔️
 * Badges -> Taxonomies ✔️
 * Dividers ✔️
+* Timelines ✔️
 
 ## Composants en cours
 
 ### Très prochainement
 
 * Button Groups
-* Stats
-* Tables
-* Timelines
 * Tabs
+* Stats & Tables
 
 ### Formulaire
 

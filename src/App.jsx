@@ -12,9 +12,9 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<FrontPage />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<Single />} />
           <Route path="*" element={<Page />} />
+          {/* <Route path="/blog" element={<Blog />} /> */}
+          {/* <Route path="/blog/:slug" element={<Single />} /> */}
         </Routes>
       </Layout>
     </DataProvider>

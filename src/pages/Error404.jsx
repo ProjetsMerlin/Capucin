@@ -5,7 +5,7 @@ function Error404() {
     <section className="section">
       <div className={page}>
         {page && (
-          <div className="max-w-3xl mx-auto p-4 text-center">
+          <div className="text-center">
             <h1>404 ERROR</h1>
           </div>
         )}

@@ -11,7 +11,7 @@
   left: 5px;
   top: 0;
   bottom: 0;
-
+  
   width: 0.125rem;
   background-color: var(--primary_color);
 }
@@ -44,9 +44,7 @@
 }
 
 .timeline-content {
-  display: flex;
-  align-items: center;
-
+text-align: center;
   padding: 1rem;
   background-color: var(--light_color);
   border-radius: 0.5rem;
@@ -54,13 +52,23 @@
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.3);
 }
 
+@media screen and (min-width: 768px) {
+  .timeline-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+
 .timeline-date {
   min-width: 96px;
 }
 
 .timeline-date img {
+  margin: 0px auto;
   margin-bottom: 0.25rem;
   width: 100%;
+  max-width: 96px;
   border-radius: 50%;
 }
 

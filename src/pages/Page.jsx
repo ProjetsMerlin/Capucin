@@ -4,22 +4,28 @@ import { useAppQuery } from "../hooks/useAppQuery"
 import { useLocation } from "react-router-dom"
 import Error404 from "../pages/Error404"
 import FrontPage from "./FrontPage"
+import Blog from "../pages/Blog"
 
 const GET_PAGE = gql`
   query GetPageBySlug($slug: String!) {
-    pageBy(uri: $slug) {
-      id
-      slug
-      title
-      content
-      date
-      isFrontPage
-      template {
-        templateName
-      }
-      author {
-        node {
-          name
+    nodeByUri(uri: $slug) {
+      __typename
+      ... on Page {
+        id
+        slug
+        uri
+        title
+        content
+        date
+        isFrontPage
+        isPostsPage
+        template {
+          templateName
+        }
+        author {
+          node {
+            name
+          }
         }
       }
     }
@@ -37,14 +43,18 @@ function Page() {
   if (error || dataError) return error
   if (loading || dataLoading) return loading
 
-  const page = data?.pageBy
+  const page = data?.nodeByUri
+
+  if (page?.isPostsPage === true) {
+    return <Blog />
+  }
+
+  if (page?.isFrontPage === true) {
+    return <FrontPage />
+  }
 
   if (!page) {
     return <Error404 />
-  }
-
-  if (page.isFrontPage === true) {
-    return <FrontPage />
   }
 
   return (
@@ -64,7 +74,7 @@ function Page() {
               <div className="mt-16">
                 <p>
                   <strong>Auteur :</strong>{" "}
-                  <span className="capitalize">{page.author.node.name}</span>
+                  <span className="capitalize">{page?.author?.node?.name}</span>
                 </p>
               </div>
             </div>

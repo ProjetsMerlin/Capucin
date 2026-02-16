@@ -61,8 +61,6 @@ const FrontPage = () => {
     return <Error404 />
   }
 
-  console.log(data.users)
-
   return (
     <>
       <Hero data={post} generalSettings={data.generalSettings} />
@@ -83,7 +81,7 @@ const FrontPage = () => {
 
       <section className="py-8">
         {/* max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 */}
-        <div class="timeline">
+        <div className="timeline">
           {data.users.edges.map((user, index) => (
             <Timeline
               id={index + "_" + user.node.id}
