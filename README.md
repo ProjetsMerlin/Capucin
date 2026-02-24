@@ -41,7 +41,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * sitemap.xml ✔️
 * favicons  ✔️
 * rewrite URL ⌛
-* Balise OGG ❌
+* Balise OGG ⌛
 
 ### Sécurité
 
@@ -94,7 +94,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ## À faire
 
-* Permuter au mieu les données avec le fichier data.json ❌
+* Permuter au mieu les données avec le fichier data.json ou le supprimer ❌
 * Montrer en 5 étapes, comment archiver le wordpress situé à la racine pour installer cCapucin : un site léger et dynamique mais toujours lier au données du CMS. ❌
 
 ## Pages crées
@@ -172,6 +172,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 * npm install @apollo/client graphql
 * npm install tailwindcss @tailwindcss/vite
 * npm run dev
+* npm run build
 
 ### Wordpress
 

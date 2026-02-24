@@ -3,7 +3,35 @@ $domain = $_SERVER['HTTP_HOST'];
 $hide_folder = "/admin";
 
 // !!! à rendre dynamique
+$site_title = "Capucin";
+$site_content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
 $urlWp = "http://localhost/capucin/wp/";
+
+function runBalisesOgg($site_title, $site_content, $url_online)
+{
+  $result = '
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="' . $site_title . '">
+  
+  <meta property="og:title" content="' . $site_title . '" />
+  <meta property="og:description" content="' . $site_content . '" />
+  <meta property="og:image" content="' . $url_online . 'assets/img/seo/share.png" />
+  <meta property="og:url" content="' . $url_online . '" />
+  <meta property="og:type" content="website">
+  
+  <meta name="twitter:title" content="' . $site_title . '" />
+  <meta name="twitter:description" content="' . $site_content . '" />
+  <meta name="twitter:image" content="' . $url_online . 'assets/img/seo/share.png" />
+  <meta name="twitter:url" content="' . $url_online . '" />
+  
+  <meta property="og:title" content="' . $site_title . '" />
+  <meta property="og:description" content="' . $site_content . '" />
+  <meta property="og:image" content="' . $url_online . 'assets/img/seo/share.png" />
+  <meta property="og:url" content="' . $url_online . '" />
+  ';
+  return $result;
+}
 
 function getRemoteSiteIcons($site_url) {
     $api_url = rtrim($site_url, '/') . '/wp-json/';
@@ -102,8 +130,9 @@ else : ?>
 <html lang="fr-BE">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capucin</title>
-    <?=  getRemoteSiteIcons($urlWp); ?>
+    <title><?= $site_title;?></title>
+    <?= getRemoteSiteIcons($urlWp); ?>
+    <?= runBalisesOgg($site_title, $site_content, $domain); ?>
     <link rel="stylesheet" crossorigin href="./style.css">
     <script type="module" crossorigin src="./main.js"></script>
     </head>
