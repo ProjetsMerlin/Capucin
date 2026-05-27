@@ -1,5 +1,5 @@
 {
-  "graphqlEndpoint": "http://localhost/capucin/wp/graphql",
+  "graphqlEndpoint": "https://lintermediaire.be/graphql",
 
   "title": null,
   "description": null,
