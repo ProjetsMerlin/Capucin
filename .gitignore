@@ -24,3 +24,5 @@ dist-ssr
 
 # hide wordpress
 /wp
+
+notes.md

@@ -1,10 +1,10 @@
 import { DataProvider } from "./context/DataContext"
 import { Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout"
+import FrontPage from "./pages/FrontPage"
 import Page from "./pages/Page"
 import Blog from "./pages/Blog"
 import Single from "./pages/Single"
-import FrontPage from "./pages/FrontPage"
 
 export default function App() {
   return (

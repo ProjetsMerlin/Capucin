@@ -48,10 +48,9 @@ function Layout({ children }) {
   const { loading, error, data } = useAppQuery(GET_MENUS)
   if (error || dataError) return error
   if (loading || dataLoading) return loading
-  const navigation = data?.menus?.nodes[0]
-  const menuItems = jsonData.content.fr.navigation ?? [
-    navigation.menuItems.nodes
-  ]
+  // !!! ici c'est [1] mais ailleurs du coup ?
+  const navigation = data?.menus?.nodes[1]
+  const menuItems = navigation.menuItems?.nodes
   const generalSettings = data?.generalSettings ?? []
   const userinfo = data?.users?.nodes[0] ?? []
   return (
@@ -66,11 +65,11 @@ function Layout({ children }) {
               <Link
                 key={"menuLink_" + index}
                 to={item.uri.split("/")[1]}
+                dangerouslySetInnerHTML={{ __html: item.label }}
                 className={
                   isActive("/" + item.uri.split("/")[1]) ? "active_link" : ""
                 }
               >
-                {item.label}
               </Link>
             ))}
           </menu>

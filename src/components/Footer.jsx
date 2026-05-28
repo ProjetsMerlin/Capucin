@@ -14,7 +14,7 @@ const Footer = ({ menu, userInfo, generalSettings, traduction }) => {
           <ul className="footer_menu">
             {menu.map((item, index) => (
               <li key={"linkFooter_" + index}>
-                <Link to={item.uri}>{item.label}</Link>
+                <Link to={item.uri} dangerouslySetInnerHTML={{ __html: item.label }} />
               </li>
             ))}
           </ul>

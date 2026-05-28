@@ -49,7 +49,7 @@ const GET_HOME = gql`
 const FrontPage = () => {
   const { data: jsonData, loading: dataLoading, error: dataError } = useData()
   const { loading, error, data } = useAppQuery(GET_HOME, {
-    variables: { slug: `home` },
+    variables: { slug: `contact` },
   })
 
   if (error || dataError) return error
