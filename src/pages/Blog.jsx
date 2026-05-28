@@ -50,6 +50,7 @@ function Blog() {
             {post.featuredImage && (
               <figure>
                 <img
+                  loading="lazy"
                   src={post.featuredImage.node.sourceUrl}
                   alt={post.title}
                   title={post.title}

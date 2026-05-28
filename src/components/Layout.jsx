@@ -58,7 +58,7 @@ function Layout({ children }) {
       <Header>
         <div className="wrap_menu">
           <Link to="/">
-            <h1>{jsonData.title ?? generalSettings.title}</h1>
+            <h1 dangerouslySetInnerHTML={{ __html: jsonData.title ?? generalSettings.title }}></h1>
           </Link>
           <menu className="menu">
             {menuItems.map((item, index) => (

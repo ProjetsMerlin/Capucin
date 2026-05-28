@@ -6,7 +6,7 @@ const Footer = ({ menu, userInfo, generalSettings, traduction }) => {
     <div>
       <footer className="footer_wrapper">
         <div>
-          <h1>{generalSettings.title}</h1>
+          <h1 dangerouslySetInnerHTML={{ __html: generalSettings.title }}></h1>
           <p>{generalSettings.description}</p>
         </div>
         <div>

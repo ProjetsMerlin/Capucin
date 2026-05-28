@@ -6,6 +6,7 @@ const Timeline = ({ author }) => {
       <div className="timeline-content">
         <div className="timeline-date">
           <img
+            loading="lazy"
             src={author.node.avatar.url}
             title={author.node.name}
             alt={author.node.name}

@@ -4,6 +4,7 @@ const Author = ({ author }) => {
       <div className="author-card">
         <div className="author-avatar">
           <img
+            loading="lazy"
             src={author.node.avatar.url}
             title={author.node.name}
             alt={author.node.name}
