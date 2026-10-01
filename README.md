@@ -23,9 +23,9 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 * Si vous gardez votre Wordpress, vous devez installer le plugin GrapQL : <https://www.wpgraphql.com/> pour en établir la liaison
 * Apollo
-* Tailind CSS
+* Tailwind CSS
 
-## plan
+## Plan
 
 * content => data.json
 * style => style.css
@@ -61,7 +61,7 @@ Et même via votre dashboard Wordpress si vous gardez sa liaison.
 
 ## Améliorations
 
-* Multilangue
+* Multilingue
 * Ajout de thèmes ?
 * Pouvoir modifier la structure ...
 
